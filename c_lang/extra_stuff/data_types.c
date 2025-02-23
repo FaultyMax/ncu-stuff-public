@@ -40,8 +40,8 @@ int main(void){
 	printf("This will display an int: %d\n", example_int);						// %d for ints
 	printf("This will display an unsigned int: %u\n\n", example_int2);			// %u for unsigned ints!
 	
-	long long int example_long = -1203013021199970993;						// 64 bits, these are very large
-	unsigned long long int example_long2 = 2103121203102312122;				// 64 bits, starts from 0 and is also large
+	long long int example_long = -1203013021199970993;							// 64 bits, these are very large
+	unsigned long long int example_long2 = 2103121203102312122;					// 64 bits, starts from 0 and is also large
 	
 	printf("This will display a long long int: %lld\n", example_long);			// %lld for ints
 	printf("This will display a long long int: %llu\n", example_long2);			// %llu for unsigned ints!

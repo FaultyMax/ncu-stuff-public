@@ -22,6 +22,8 @@ int main(void){
 
 /*
 
+author's solution
+
 #include <stdio.h>
 
 int main(int argc, char** argv) {

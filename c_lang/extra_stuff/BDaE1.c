@@ -19,7 +19,7 @@ int main(void){
 
 /*
 
-rozwiązanie autora.
+author's solution
 
 #include <stdio.h>
 

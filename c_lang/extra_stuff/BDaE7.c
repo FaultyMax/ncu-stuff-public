@@ -1,5 +1,34 @@
-//Basic Declarations and Expressions exercise
+/* Basic Declarations and Expressions exercise 7 */
 
+#include <stdio.h>
+
+int a = 125, b = 12345;
+long ax = 1234567890;
+short s = 4043;
+float x = 2.13459;
+double dx = 1.1415927;
+char c = 'W';
+unsigned long ux = 2541567890;
+
+int main(void){
+	
+	printf(" a + c: %d\n x + c: %f\n dx + x: %f\n dx + ax: %d\n a + x: %f\n s + b: %d\n ax + b: %d\n s + c: %d\n ax + c: %d\n ax + ux : %llu\n",
+	
+	a+c,
+	x+c,
+	dx+x,
+	(int) dx + ax,
+	a + x,
+	s + b,
+	ax + b,
+	s + c,
+	ax + c,
+	ax + ux
+	
+	);
+	
+	return 0;
+}
 
 /*
 

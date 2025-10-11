@@ -1,0 +1,34 @@
+komunikacja między procesami na 1 maszynie
+i na różnych maszynach
+
+		1)			2)
+BSD		IPC POSIX	Gniazda BSD <-
+sysV	IPC SysV <-	TLI SysV
+
+L12
+Win/Lin
+K1
+
+Win/Lin
+K2
+
+Ultra60		|
+Juliusz		|
+sxterm		|-- Macierz dyskowa ( katalog dom. )
+aleks-2		|
+vh0 - vh9	|
+
+				win			lin/Unix
+logowanie		putty		ssh
+kopiowanie		Winscp		scp
+
+uname -a
+sxterm Linux sxterm 6.1.0-30-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.124-1 (2025-01-12) x86_64 GNU/Linux	
+ultra 60 FreeBSD ultra60 14.3-RELEASE-p2 FreeBSD 14.3-RELEASE-p2 GENERIC amd64
+juliusz FreeBSD juliusz 14.3-RELEASE-p2 FreeBSD 14.3-RELEASE-p2 GENERIC amd64
+aleks-2 Linux aleks-2.mat.umk.pl 6.15.2-1.el8.elrepo.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Jun 10 12:40:57 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+vh0-vh9 Linux
+
+
+
+

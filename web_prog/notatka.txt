@@ -29,6 +29,30 @@ juliusz FreeBSD juliusz 14.3-RELEASE-p2 FreeBSD 14.3-RELEASE-p2 GENERIC amd64
 aleks-2 Linux aleks-2.mat.umk.pl 6.15.2-1.el8.elrepo.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Jun 10 12:40:57 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
 vh0-vh9 Linux
 
+zaj. 2
+
+) id, groups, users, who, chmod, chown, chgrp, usermod, userid
+) stat, realtpath, reallink
+
+----------------------
+	fscanf,fprintf	|	<- (fread, fwrite), read, write
+	printf,fopen	|		open close
+	fclose			|
+					|
+	uchwyt: FILE*	|	) deskryptor : int
+					|	) niskopoziomowe
+	wysokopoziomowe	|	) błąd -> zwraca -1
+					|	kod błedu -> zmienna errno
+					|
+					|
 
 
+1000 - zwykły plik
+0100 - katalog
+
+jakie wartość ósemkową ma słowo st_mode dla zwykłego pliku o uprawnieniach rw-r--r-- bez SUID SGID i Sticky bit?
+
+1 0 0 6 4 4
+
+zad Jak wygląda maska za pmocą której sprawdzimy czy słowo st_mode reprezentuje katalog?
 

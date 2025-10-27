@@ -17,16 +17,29 @@ int main(){
 	
 	cin >> napis;
 	
-	for(int i = 0; i < napis.length() ; i++){
+	for(int i = 0; i < (int)napis.length() ; i++){
 		
-		cout << napis[i] << endl;
+		int ascii = napis[i];
+		
+		if(ascii >= 'A' and ascii <= 'Z'){
+			tab[ascii-'A']++;
+		} else if ( ascii >= 'a' and ascii <= 'z'){
+			tab[ascii-'a']++;
+		}
+	}
 	
-		tab[(int)napis[i] - 'a']++;
+	int max = 0;
+	int index = 0;
+	char output = 0;
+	
+	for(int i = 0 ; i < 26 ; i++){
 		
-		cout << tab[(int)napis[i] - 'a'] << endl;
+		if(tab[i] > max){ max = tab[i]; index = i; }
 		
 	}
 	
+	output += index+'a';
 	
+	cout << (char)output << endl;
 	
 }

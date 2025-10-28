@@ -11,7 +11,7 @@ struct dtab{
 	
 };
 
-dtab create(int n);
+dtab create();
 void append();
 void remove();
 void insert();

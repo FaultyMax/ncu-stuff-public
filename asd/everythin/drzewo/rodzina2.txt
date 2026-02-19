@@ -1,0 +1,4 @@
+Janusz;Kowalski;1980;ROOT;ROOT
+Anna;Kowalska;2002;Janusz;Kowalski
+Jakub;Nowak;2024;Anna;Kowalska
+Piotr;Kowalski;2003;Janusz;Kowalski

@@ -1,23 +1,34 @@
 from collections import deque
 
+INF = 10000000
+
 def matrix_print(matrix,n):
 	for i in range(n):
 		for j in range(n):
 			print(matrix[i][j], end=" ")
 		print()
+
+def matrix_mul(matrix1,matrix2,n):
 	
-def matrix_mul(m1,m2,n):
-	return 1
+	new_m = [[0] * n for _ in range(n)]
+		
+	for i in range(n):
+		for j in range(n):
+			m_sum = 0
+			for k in range(n):
+				m_sum += matrix1[i][k] * matrix2[k][j]				
+			new_m[i][j] = m_sum
+			
+	return new_m
 
 def matrix_power(matrix,n,power):
 	
 	ID_matrix = [[int(col == row) for col in range(n)] for row in range(n)]
-	#matrix_print(ID_matrix,n)
 	
 	if power == 0:
 		return ID_matrix 
 	else:
-		return matrix * matrix_power(matrix,n,power-1)
+		return matrix_mul(matrix,matrix_power(matrix,n,power-1),n)
 	
 
 def DFS(graph,v):
@@ -57,10 +68,45 @@ def BFS(graph,v):
 	
 	return res
 
+def Dijkstra(Graph,start):
+	
+	dist = {}
+	prev = {}
+	visited = {}
+	
+	for v in Graph.keys():
+		dist[v] = INF
+		prev[v] = None
+		visited[v] = False
+		
+	dist[start] = 0
+	Q = []
+	Q.append((0,start))
+	
+	while Q:
+		d,u = min(Q)
+		Q.remove((d,u))
+		
+		if visited[u]:
+			continue
+		
+		visited[u] = True
+		
+		for edge in Graph[u]:
+			new_dist = dist[u] + Graph[u][edge]
+			if new_dist < dist[edge]:
+				dist[edge] = new_dist
+				prev[edge] = u
+				Q.append((new_dist,edge))
+				
+	return dist, prev
+	
 
 graph = {}
 
 graph_m = []
+
+graph_weighted = {}
 
 with open("dane.txt","rt") as f:
 	
@@ -68,33 +114,37 @@ with open("dane.txt","rt") as f:
 	
 	graph_m = [[0 for _ in range(n)] for _ in range(n)]
 	
-	while True:
+	for i in range(1, n + 1):
+		graph[i] = []
+		graph_weighted[i] = {}
+	
+	for line in f:
 		
-		line = (f.readline()).strip()
+		line = line.strip()
 		
 		if not line:
-			break
+			continue
 		
-		x = line.split()
-		l = int(x[0])
-		r = int(x[1])
+		l,r = map(int, line.split())
+		#l = int(x[0])
+		#r = int(x[1])
+		
+		weight = ((l+r) % 5) + 1
 		
 		graph_m[l-1][r-1] = 1
-		
-		if graph.get(l) == None:
-			#print("y")
-			graph[l] = [r]
-		else:
-			graph.get(l).append(r)
-			#print("n")
-			
-		
-#print(graph)
-#print(graph_m)
-			
-
+		graph[l].append(r)
+		graph_weighted[l][r] = weight	
 			
 print(DFS(graph,1))
 print(BFS(graph,1))
 
-print(matrix_power(graph_m,n,1))
+t = matrix_power(graph_m,n,4)
+matrix_print(t,n)
+
+# dla grafów ważonych wykorzystam słownik słówników
+
+print(graph_weighted)
+
+dis,pre = Dijkstra(graph_weighted,1)
+
+print(dis,pre)

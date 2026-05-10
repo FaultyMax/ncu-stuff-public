@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-public class Stos extends LinkedList {
+public class Stos extends LinkedList<Object> {
 
 	public void wstaw(Object o){
 		this.add(o);

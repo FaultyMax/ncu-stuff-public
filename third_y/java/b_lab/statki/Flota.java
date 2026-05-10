@@ -1,4 +1,20 @@
 
+/*
+
+Zdefiniować klasę Okret zawierającą długości boków, ilość pasażerów, wyporność, unikalny numer okrętu, 
+trzy wersje konstruktora przeciążonego, metodę obliczającą pole powierzchni (należy założyć, że jest w kształcie prostokąta). 
+Następnie zdefiniować klasy:
+• Niszczyciel dziedziczącą z klasy Okret i uzupełnioną o informację o sile rażenia i ilość dział, 
+• Lotniskowiec dziedziczącą z klasy Niszczyciel i uzupelnioną o dane dotyczące ilości samolotów, które może pomieścić.
+Do obu klas (Niszczyciel i Lotniskowiec) dodać metodę toString() wypisującą odpowiednie informacje o statkach.
+Na koniec, zdefiniować klasę Flota zawierającą:
+• tablicę z elementami typu Okret, która będzie wypelniana dynamicznie poprzez utworzoną do tego celu metodę dodajDoFloty(Okret),
+• konstruktory umożliwiające określenie ilości obiektów typu Niszczyciel i Lotniskowiec, 
+• funkcję main(-) inicjalizującą obiekt typu Flota i wypisującą informacje o jej składzie z wykorzystaniem utworzonej do tego celu metody toString(),
+• metodę silaFloty() zliczającą siłę rażenia, ilość pasażerów i dział w całej flocie.
+
+*/
+
 public class Flota{
 
     private int ilosc_statkow;

@@ -4,3 +4,14 @@
 **/referat/*
 
 **/other/*
+
+# java
+
+*.class
+*.jar
+
+# python
+
+__pycache__/
+.env
+.envrc

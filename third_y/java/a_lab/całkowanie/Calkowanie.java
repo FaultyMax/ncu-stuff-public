@@ -1,4 +1,15 @@
 
+/*
+
+Napisac klase Calkowanie, która bedzie posiadała funkcje obliczKwadratowe wyliczajaca wartosc
+całki nieoznaczonej dla równania kwadratowego. Program podczas uruchomienia powinien pobrac
+wartosci 5 argumentów: a, b, c, x1 i x2. Pierwsze trzy liczby oznaczaja współczynniki równania
+kwadratowego ax2 + bx + c, natomiast dwie pozostałe granice całkowania (od x1 do x2). Wyni-
+kiem powinna byc liczba bedaca przyblizona wartoscia całki nieoznaczonej z podanego równania
+kwadratowego	
+
+*/
+
 public class Calkowanie{
 	
 	public double obliczKwadratowe(double a, double b, double c, double x1, double x2){
@@ -29,4 +40,6 @@ public class Calkowanie{
 		}
 		
 	}
-}
+}	
+
+// 1 2 1 1 2

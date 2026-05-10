@@ -1,4 +1,16 @@
 
+/*
+
+Utworzyć klasę ONP obliczającą wartość wyrażenia podanego w odwrotnej notacji polskiej. 
+W tym celu należy wykorzystać strukturę stosu utworzoną w zadaniu 3. Klasa powinna mieć metodę main(-),
+która odczyta wyrażenie z argumentu podanego w lini poleceń podczas uruchamiania programu.
+Następnie przekaże zainicjuje instancję klasy ONP z wykorzystaniem jedynego konstruktora przyjmującego jako parametr obiekt String
+zawierający wyrażenie. Ponadto klasa powinna posiadać metodę wyznaczWartosc(), która zwróci wartość wyrażenia.
+Należy założyć, że w wyrażeniu będą tylko liczby całkowite, jeden operator jednoargumentowy - zmieniający znak liczby oraz 
+dwa operatory dwuargumentowe + i * reprezentujące dodawanie i mnożenie.
+
+*/
+
 public class ONP {
     private String input;
 
@@ -38,6 +50,7 @@ public class ONP {
     public static void main(String[] args) {
 
         if (args.length == 0) {
+            System.out.println("Należy podać jakieś wyrażenie np. 2 3 + 5 x");
             return;
         }
 

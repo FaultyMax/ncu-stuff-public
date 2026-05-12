@@ -5,6 +5,8 @@
 
 **/other/*
 
+*.html
+
 # java
 
 *.class
@@ -15,3 +17,10 @@
 __pycache__/
 .env
 .envrc
+
+
+# C | CPP
+
+*.o
+*.exe
+*.out

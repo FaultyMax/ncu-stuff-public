@@ -1,5 +1,15 @@
 import java.util.*;
 
+/*
+
+Stwórz klase generyczna MaszynaLosujaca przechowujaca dowolne elementy i umozliwiajaca
+losowanie ich za pomoca metody losujElement() (bez powtórzen). Stwórz metode zwracajaca
+wszystkie przechowywane elementy na liscie (ArrayList) w losowej kolejnosci (losujListe()).
+• tylko elementów typu Koło,
+• elemntów typu Figura.
+
+*/
+
 public class MaszynaLosujaca<E> {
 
 	public static void main(String[] args) {
@@ -12,13 +22,13 @@ public class MaszynaLosujaca<E> {
 		CircleMachine.add(new Circle(16));
 
 		System.out.println("Random list (Circles):");
-		for (Figure f : CircleMachine.drawList()) {
+		for (Figure f : CircleMachine.losujListe()) {
 			System.out.println(" " + f);
 		}
 
 		System.out.println("Drawing elements...");
 		while (CircleMachine.size() > 0) {
-			System.out.println(" I got: " + CircleMachine.drawElement());
+			System.out.println(" I got: " + CircleMachine.losujElement());
 		}
 
 		MaszynaLosujaca<Figure> figureMachine = new MaszynaLosujaca<>();
@@ -30,13 +40,13 @@ public class MaszynaLosujaca<E> {
 		figureMachine.add(new EquilateralTriangle(3));
 
 		System.out.println("Random list:");
-		for (Figure f : figureMachine.drawList()) {
+		for (Figure f : figureMachine.losujListe()) {
 			System.out.println(" " + f);
 		}
 
 		System.out.println("Drawing elements...");
 		while (figureMachine.size() > 0) {
-			System.out.println(" I got: " + figureMachine.drawElement());
+			System.out.println(" I got: " + figureMachine.losujElement());
 		}
 
 	} 
@@ -52,7 +62,7 @@ public class MaszynaLosujaca<E> {
 		elements.add(element);
 	}
 
-	public E drawElement() {
+	public E losujElement() {
 		if (elements.isEmpty()) {
 			throw new java.util.NoSuchElementException("Machine is empty");
 		}
@@ -60,7 +70,7 @@ public class MaszynaLosujaca<E> {
 		return elements.remove(index);
 	}
 
-	public ArrayList<E> drawList() {
+	public ArrayList<E> losujListe() {
 		ArrayList<E> copy = new ArrayList<>(elements);
 		Collections.shuffle(copy);
 		return copy;

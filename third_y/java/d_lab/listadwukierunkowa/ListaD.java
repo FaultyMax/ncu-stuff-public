@@ -1,5 +1,22 @@
 import java.util.*;
 
+/*
+
+Zaimplementuj generyczna liste dwukierunkowa (ListaD), z metodami getNextElement(), getPrevE-
+lement(), addElement(E), getFirstElement(), getLastElement(), insertElement(E), insertList(ListaD),
+concatList(ListaD). Zaimplementuj w klasie Figura interfejs Comparable (porównywanie po wiel-
+kosci pola (this.getPole()) ) Przeciaz ListaD, dodajac do niej sortowanie babelkowe bubbleSort().
+Sprawdz czy działa wymuszenie uzywania
+• tylko elementów typu Koło
+• elemntów typu Figura
+• Posortuj te elementy.
+Ze standardowego wejscia pobierz nastapujace dane:
+• Linia 1: Liczba elementów (N)
+• Linie 2-N+1: Typ (C - koło, S - kwadrat, T - trójat równoboczny) wymiar (promien lub bok)
+Wyswietl posortowane figury uwzgledniajac ich typ i rozmiar pola.
+
+*/
+
 public class ListaD<E> {
 
 	public static void main(String[] args) {
